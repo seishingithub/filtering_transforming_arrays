@@ -14,4 +14,14 @@ class Students
     all_students.select {|student| names << student[:name]}
     names
   end
+
+  def born_before_1970
+    students = []
+    all_students.collect do |student|
+      if student[:birth_year] < 1970
+        students << student
+      end
+    end
+    p students
+  end
 end

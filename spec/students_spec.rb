@@ -32,7 +32,7 @@ describe Students do
   end
 
   it 'can return students born before a certain year' do
-    pending
+
     students = Students.new
     expected_students = [
       {name: "Peggy", birth_year: 1968},
