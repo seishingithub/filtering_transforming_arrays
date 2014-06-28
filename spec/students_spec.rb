@@ -17,14 +17,13 @@ describe Students do
   end
 
   it 'can return names of all students' do
-    pending
     students = Students.new
 
     expected_names = [
       "Peggy",
       "Fred",
       "Sarah",
-      "lisa",
+      "Lisa",
       "Ian"
     ]
 

@@ -8,4 +8,10 @@ class Students
       {name: "Ian", birth_year: 1979},
     ]
   end
+
+  def student_names
+    names = []
+    all_students.select {|student| names << student[:name]}
+    names
+  end
 end
