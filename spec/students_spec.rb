@@ -55,7 +55,6 @@ describe Students do
   end
 
   it 'can return the names of students born after a certain year' do
-    pending
     students = Students.new
 
     expected_names = [

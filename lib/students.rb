@@ -18,7 +18,7 @@ class Students
   def born_before(year)
     students = []
     all_students.collect do |student|
-      if student[:birth_year] < 1970
+      if student[:birth_year] < year
         students << student
       end
     end
@@ -28,12 +28,18 @@ class Students
   def born_in_after(year)
     students = []
     all_students.map do |student|
-      if student[:birth_year] >= 1970
+      if student[:birth_year] >= year
         students << student
       end
     end
     p students
   end
 
-
+  def student_names_born_after(year)
+    names = []
+    born_in_after(year).select do |student|
+        names << student[:name]
+    end
+    p names
+  end
 end
