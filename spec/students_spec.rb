@@ -40,7 +40,7 @@ describe Students do
       {name: "Lisa", birth_year: 1961},
     ]
 
-    expect(students.born_before_1970).to match_array expected_students
+    expect(students.born_before(1970)).to match_array expected_students
   end
 
   it 'can return students born after a certain year' do
@@ -51,7 +51,7 @@ describe Students do
       {name: "Ian", birth_year: 1979},
     ]
 
-    expect(students.born_in_after_1970).to match_array expected_students
+    expect(students.born_in_after(1970)).to match_array expected_students
   end
 
   it 'can return the names of students born after a certain year' do
@@ -63,6 +63,6 @@ describe Students do
       "Ian",
     ]
 
-    expect(students.student_names_born_in_after_1970).to match_array expected_names
+    expect(students.student_names_born_after(1970)).to match_array expected_names
   end
 end
