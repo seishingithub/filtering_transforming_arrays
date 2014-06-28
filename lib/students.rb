@@ -11,7 +11,7 @@ class Students
 
   def student_names
     names = []
-    all_students.select {|student| names << student[:name]}
+    all_students.select { |student| names << student[:name] }
     names
   end
 
@@ -24,4 +24,16 @@ class Students
     end
     p students
   end
+
+  def born_in_after_1970
+    students = []
+    all_students.map do |student|
+      if student[:birth_year] >= 1970
+        students << student
+      end
+    end
+    p students
+  end
+
+  
 end
